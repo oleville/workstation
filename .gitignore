@@ -1,0 +1,6 @@
+# Don't keep files created by Vagrant
+.vagrant
+
+# Don't keep the backups made, but keep the directory structure
+database/backups/*
+!database/backups/.gitkeep
