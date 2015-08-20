@@ -106,6 +106,14 @@ cat > /etc/apache2/sites-enabled/000-default.conf <<EOF
 </VirtualHost>
 EOF
 
+echo -e "--- Installing Composer ---"
+echo -e "curl -sS https://getcomposer.org/installer"
+curl --silent https://getcomposer.org/installer | php > /dev/null 2>&1
+echo -e "chmod +x composer.phar"
+chmod +x composer.phar
+echo -e "mv composer.phar /usr/local/bin/composer"
+mv composer.phar /usr/local/bin/composer
+
 echo -e "--- Installing Sendmail ---"
 echo -e "(This may take a few minutes)"
 echo -e "apt-get -y install sendmail"
