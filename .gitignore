@@ -4,3 +4,8 @@
 # Don't keep the backups made, but keep the directory structure
 database/backups/*
 !database/backups/.gitkeep
+
+# Don't keep anything in the www directory, since it will be handled
+# by other repositories
+www/*
+!www/.gitkeep
